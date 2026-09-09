@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fake News Detection & Media Literacy</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">🛡️</div>
+
+            <div>
+                <h1>Fake News Detection</h1>
+                <p>Media Literacy & Digital Awareness</p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+        <button onclick="showSection('home')">🏠 Home</button>
+        <button onclick="showSection('detector')">🔍 News Detector</button>
+        <button onclick="showSection('literacy')">📚 Media Literacy</button>
+        <button onclick="showSection('warning')">⚠️ Warning Signs</button>
+        <button onclick="showSection('about')">ℹ️ About</button>
+        <button onclick="showSection('quiz')">Quiz</button>
+    </nav>
+
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="section active">
+
+            <div class="hero">
+
+                <div class="hero-text">
+                    <h2>Think Before You Believe</h2>
+
+                    <p>
+                        Learn how to identify misleading information,
+                        verify online news and become a responsible
+                        digital citizen.
+                    </p>
+
+                    <button class="primary-btn"
+                            onclick="showSection('detector')">
+                        Start Checking News →
+                    </button>
+                </div>
+
+                <div class="hero-icon">
+                    📰🛡️
+                </div>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="info-card">
+                    <span>🔍</span>
+                    <h3>Detect</h3>
+                    <p>
+                        Analyze news text for common warning signs.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <span>🧠</span>
+                    <h3>Learn</h3>
+                    <p>
+                        Improve your media literacy skills.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <span>✅</span>
+                    <h3>Verify</h3>
+                    <p>
+                        Learn how to verify information before sharing.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NEWS DETECTOR -->
+        <section id="detector" class="section">
+
+            <div class="page-card">
+
+                <h2>🔍 Fake News Detector</h2>
+
+                <p class="description">
+                    Paste a news headline or article below.
+                    The system will check for common warning signs.
+                </p>
+
+                <textarea
+                    id="newsText"
+                    placeholder="Paste your news article or headline here..."
+                ></textarea>
+
+                <button class="primary-btn"
+                        onclick="analyzeNews()">
+                    Analyze News
+                </button>
+
+                <div id="result"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MEDIA LITERACY -->
+        <section id="literacy" class="section">
+
+            <div class="page-card">
+
+                <h2>📚 Media Literacy</h2>
+
+                <p class="description">
+                    Media literacy helps us understand, evaluate
+                    and responsibly share information.
+                </p>
+
+                <div class="tips">
+
+                    <div class="tip">
+                        <span>🔎</span>
+                        <h3>Check the Source</h3>
+                        <p>
+                            Find out who published the information
+                            and whether the source is trustworthy.
+                        </p>
+                    </div>
+
+                    <div class="tip">
+                        <span>📅</span>
+                        <h3>Check the Date</h3>
+                        <p>
+                            Make sure old information is not being
+                            presented as recent news.
+                        </p>
+                    </div>
+
+                    <div class="tip">
+                        <span>🔗</span>
+                        <h3>Compare Sources</h3>
+                        <p>
+                            Check important claims with multiple
+                            reliable sources.
+                        </p>
+                    </div>
+
+                    <div class="tip">
+                        <span>🧠</span>
+                        <h3>Think Before Sharing</h3>
+                        <p>
+                            Verify information before forwarding
+                            or posting it online.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WARNING SIGNS -->
+        <section id="warning" class="section">
+
+            <div class="page-card">
+
+                <h2>⚠️ Warning Signs of Fake News</h2>
+
+                <div class="warning-list">
+
+                    <div>
+                        <strong>🚨 Sensational Headlines</strong>
+                        <p>
+                            Headlines designed mainly to shock or
+                            scare readers.
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>❗ Emotional Language</strong>
+                        <p>
+                            Content that strongly tries to make
+                            you angry, scared or excited.
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>🔗 Unknown Source</strong>
+                        <p>
+                            The website or author is difficult
+                            to identify.
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>📸 Misleading Images</strong>
+                        <p>
+                            Images may be used without proper
+                            context.
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>📢 Pressure to Share</strong>
+                        <p>
+                            Messages asking you to immediately
+                            share or forward information.
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>❓ No Evidence</strong>
+                        <p>
+                            Claims are made without reliable
+                            evidence or supporting sources.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+ <!-- ========================================
+     QUIZ SECTION
+======================================== -->
+
+<section id="quiz" class="section">
+
+    <div class="page-card quiz-container">
+
+        <h2>🧠 Fake News & Media Literacy Quiz</h2>
+
+        <p id="questionNumber"></p>
+
+        <h3 id="question"></h3>
+
+        <div id="options"></div>
+
+        <button
+            id="nextBtn"
+            class="primary-btn"
+            onclick="nextQuestion()"
+            style="display:none;">
+            Next Question
+        </button>
+
+        <div id="quizResult"></div>
+
+    </div>
+
+</section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+
+            <div class="page-card">
+
+                <h2>ℹ️ About This Project</h2>
+
+                <p>
+                    <strong>Fake News Detection & Media Literacy</strong>
+                    is an educational web application designed
+                    to create awareness about misinformation and
+                    responsible digital media usage.
+                </p>
+
+                <h3 class="sub-heading">
+                    🎯 Project Objectives
+                </h3>
+
+                <ul>
+                    <li>Identify common warning signs of fake news.</li>
+                    <li>Improve digital media awareness.</li>
+                    <li>Encourage users to verify information.</li>
+                    <li>Promote responsible online sharing.</li>
+                </ul>
+
+                <div class="notice">
+                    ⚠️ <strong>Important:</strong>
+                    This application uses simple rule-based text
+                    analysis. It cannot guarantee whether a news
+                    article is actually true or false.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <h3>🛡️ Fake News Detection & Media Literacy</h3>
+        <p>Think Before You Click • Check Before You Share</p>
+        <p>© 2026 BSc IT Project</p>
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
