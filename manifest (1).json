@@ -1,13 +1,22 @@
 {
-  "background_color": "#ffffff",
-  "dir": "ltr",
-  "display": "standalone",
-  "name": "Fake News Detector &amp; Media Literacy",
-  "orientation": "any",
-  "scope": "/",
+  "name": "Fake News Detector & Media Literacy",
   "short_name": "Fake News Detector",
-  "start_url": "/",
-  "theme_color": "#2563eb",
-  "id": "fake-news-detector",
-  "description": "An educational web app that helps users identify common fake-news warning signs and improve media literacy."
+  "id": "/",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2563EB",
+  "description": "An educational web app that helps users identify common fake-news warning signs and improve media literacy.",
+  "icons": [
+    {
+      "src": "./launchericon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./launchericon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
